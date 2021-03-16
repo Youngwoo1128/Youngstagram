@@ -7,10 +7,20 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-   <Button
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="token"
-       android:onClick="clickBtn"/>
+    <RelativeLayout
+        android:id="@+id/main_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view_main"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/main_bottom_navigation_items"
+        app:labelVisibilityMode="unlabeled"/>
+
+
+
 
 </LinearLayout>
