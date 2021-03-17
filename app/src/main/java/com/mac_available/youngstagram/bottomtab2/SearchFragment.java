@@ -17,6 +17,8 @@ import com.google.android.material.card.MaterialCardView;
 import com.mac_available.youngstagram.MainActivity;
 import com.mac_available.youngstagram.R;
 
+import java.util.ArrayList;
+
 public class SearchFragment extends Fragment {
 
     Toolbar toolbar;
@@ -24,6 +26,8 @@ public class SearchFragment extends Fragment {
     RecyclerView recyclerKeywords;
     RecyclerView recyclerImages;
     KeywordsAdapter keywordsAdapter;
+    ArrayList<Integer> imgItems;
+    ImageAdapter imageAdapter;
 
     @Nullable
     @Override
@@ -51,5 +55,27 @@ public class SearchFragment extends Fragment {
         keywordsAdapter = new KeywordsAdapter(keywords, getContext());
         recyclerKeywords.setAdapter(keywordsAdapter);
 
+        recyclerImages = view.findViewById(R.id.recycler_search_fragment_image);
+        imgItems = new ArrayList<>();
+        loadImg();
+        imageAdapter = new ImageAdapter(getContext(), imgItems);
+        recyclerImages.setAdapter(imageAdapter);
+
+
     }
+
+    public void loadImg(){
+        imgItems.add(R.drawable.instaprofile01);
+        imgItems.add(R.drawable.instaprofile02);
+        imgItems.add(R.drawable.instaprofile03);
+        imgItems.add(R.drawable.instaprofile04);
+        imgItems.add(R.drawable.instaprofile05);
+        imgItems.add(R.drawable.instaprofile06);
+        imgItems.add(R.drawable.instaprofile07);
+        imgItems.add(R.drawable.instaprofile08);
+        imgItems.add(R.drawable.instaprofile09);
+        imgItems.add(R.drawable.instaprofile10);
+        imgItems.add(R.drawable.instaprofile11);
+    }
+
 }
