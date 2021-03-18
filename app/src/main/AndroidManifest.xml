@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Youngstagram">
+        <activity android:name=".bottomtab5.MyFollowing"></activity>
+        <activity android:name=".bottomtab5.MyFollower" />
+        <activity android:name=".bottomtab1.ChattingActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

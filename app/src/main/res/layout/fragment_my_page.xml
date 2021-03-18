@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/my_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_bottom_main_my_page"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/myList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="게시물"
+        android:layout_toRightOf="@+id/my_photo"
+        android:layout_alignBottom="@+id/my_photo"
+        android:layout_marginLeft="48dp"/>
+
+    <TextView
+        android:id="@+id/number_myList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_toRightOf="@+id/my_photo"
+        android:layout_above="@+id/myList"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="24dp"
+        android:textSize="28sp"/>
+
+    <TextView
+        android:id="@+id/myFollower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="팔로워"
+        android:layout_toRightOf="@+id/myList"
+        android:layout_alignBottom="@+id/myList"
+        android:layout_marginLeft="48dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/number_myFollower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="28sp"
+        android:layout_toRightOf="@+id/number_myList"
+        android:layout_marginLeft="68dp"
+        android:layout_above="@+id/myFollower"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/myFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="팔로잉"
+        android:layout_toRightOf="@+id/myFollower"
+        android:layout_alignBottom="@+id/myFollower"
+        android:layout_marginLeft="48dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/number_myFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_toRightOf="@+id/number_myFollower"
+        android:textSize="28sp"
+        android:layout_above="@+id/myFollowing"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="70dp"
+        android:clickable="true"/>
+
+</RelativeLayout>
