@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/account_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfghjkasdfghjlasdfghjkhgvfyfyv"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"/>
+
+    <EditText
+        android:id="@+id/account_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="id"
+        android:layout_alignRight="@+id/account_empty"
+        android:layout_above="@+id/account_empty"
+        android:layout_marginBottom="-4dp"
+        android:background="@drawable/edit_box"/>
+
+    <EditText
+        android:id="@+id/account_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password"
+        android:layout_alignRight="@+id/account_empty"
+        android:layout_below="@+id/account_empty"
+        android:layout_marginTop="1dp"
+        android:layout_alignLeft="@id/account_id"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_box"/>
+
+    <Button
+        android:id="@+id/make"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#000000"/>
+
+
+
+</RelativeLayout>

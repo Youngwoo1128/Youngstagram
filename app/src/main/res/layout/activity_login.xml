@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfghjkasdfghjlasdfghjkhgvfyfyv"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"/>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="id"
+        android:layout_alignRight="@+id/empty"
+        android:layout_above="@+id/empty"
+        android:layout_marginBottom="-4dp"
+        android:background="@drawable/edit_box"/>
+
+    <EditText
+        android:id="@+id/et_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password"
+        android:layout_alignRight="@+id/empty"
+        android:layout_below="@+id/empty"
+        android:layout_marginTop="1dp"
+        android:layout_alignLeft="@id/et_id"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_box"/>
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계정 생성"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_below="@+id/et_pw"
+        android:layout_marginTop="8dp"
+        android:layout_alignLeft="@id/et_pw"/>
+
+</RelativeLayout>
