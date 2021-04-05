@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+    <EditText
+        android:id="@+id/edit_text_login_activity_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@drawable/account_activity_edit_text_shape"
+        android:padding="8dp"
+        android:layout_centerInParent="true"
+        android:hint="id"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_add_account_login_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:layout_below="@id/edit_text_login_activity_id"
+        android:layout_alignLeft="@id/edit_text_login_activity_id"
+        android:layout_marginLeft="32dp"
+        android:clickable="true"
+        android:onClick="clickAddAccount"/>
+
+    <TextView
+        android:id="@+id/tv_login_login_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:layout_below="@id/edit_text_login_activity_id"
+        android:layout_alignRight="@id/edit_text_login_activity_id"
+        android:layout_marginRight="32dp"
+        android:clickable="true"
+        android:onClick="clickLogIn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gogo"
+        android:layout_alignParentBottom="true"
+        android:onClick="clickGogo"/>
+
+
+</RelativeLayout>

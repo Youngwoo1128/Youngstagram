@@ -2,12 +2,14 @@ package com.mac_available.youngstagram;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -15,11 +17,12 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mac_available.youngstagram.bottomtab1.HomeFragment;
 import com.mac_available.youngstagram.bottomtab2.SearchFragment;
-import com.mac_available.youngstagram.bottomtab3.AddFragment;
 import com.mac_available.youngstagram.bottomtab4.FavoriteFragment;
-import com.mac_available.youngstagram.bottomtab5.MyPageFragment;
+import com.mac_available.youngstagram.bottomtab3.MyPageFragment;
+import com.mac_available.youngstagram.bottomtab5.SettingFragment;
 
 public class MainActivity extends AppCompatActivity {
+    final int REQUEST_CODE_FOR_PERMISSION = 0;
     BottomNavigationView bottomNavigationView;
     FragmentManager fragmentManager;
     Fragment[] fragments;
@@ -35,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         fragments[0] = new HomeFragment();
 
         fragmentManager.beginTransaction().add(R.id.main_fragment_container, fragments[0]).commit();
+
+        String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        if (ActivityCompat.checkSelfPermission(this, permissions[0]) == PackageManager.PERMISSION_DENIED ) {
+            ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_FOR_PERMISSION);
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -65,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                         transaction.show(fragments[1]);
                         break;
-                    case R.id.bottom_main_add:
+                    case R.id.bottom_main_my_page:
                         if (fragments[2] == null) {
-                            fragments[2] = new AddFragment();
+                            fragments[2] = new MyPageFragment();
                             transaction.add(R.id.main_fragment_container, fragments[2]);
                         }
                         transaction.show(fragments[2]);
@@ -79,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                         transaction.show(fragments[3]);
                         break;
-                    case R.id.bottom_main_my_page:
+                    case R.id.bottom_main_setting:
                         if (fragments[4] == null) {
-                            fragments[4] = new MyPageFragment();
+                            fragments[4] = new SettingFragment();
                             transaction.add(R.id.main_fragment_container, fragments[4]);
                         }
                         transaction.show(fragments[4]);

@@ -9,16 +9,16 @@
         android:title="search"
         android:icon="@drawable/ic_bottom_main_search"/>
     <item
-        android:id="@+id/bottom_main_add"
-        android:title="add"
-        android:icon="@drawable/ic_bottom_main_add"/>
+        android:id="@+id/bottom_main_my_page"
+        android:title="my_page"
+        android:icon="@drawable/ic_bottom_main_my_page"/>
     <item
         android:id="@+id/bottom_main_favorite"
         android:title="favorite"
         android:icon="@drawable/ic_bottom_main_favorite"/>
     <item
-        android:id="@+id/bottom_main_my_page"
-        android:title="favorite"
-        android:icon="@drawable/ic_bottom_main_my_page"/>
+        android:id="@+id/bottom_main_setting"
+        android:title="setting"
+        android:icon="@drawable/ic_baseline_settings_24"/>
 
 </menu>
